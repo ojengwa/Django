@@ -1,5 +1,5 @@
 """
-Django settings for recruitmenttool project.
+Django settings for project project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'j81ycx4yc*fe6tc-9irrubbq)q*4g^0vf=40ofh!240&!rc%*h'
+SECRET_KEY = '64ef^llw4^9@@c82pa=(+0vgy-$%u@4t)u6gsixa&og$e7mqv&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -48,9 +48,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'recruitmenttool.urls'
+ROOT_URLCONF = 'project.urls'
 
-WSGI_APPLICATION = 'recruitmenttool.wsgi.application'
+WSGI_APPLICATION = 'project.wsgi.application'
 
 
 # Database

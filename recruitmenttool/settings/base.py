@@ -1,5 +1,5 @@
 """
-Django settings for project project.
+Django settings for recruitmenttool project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '64ef^llw4^9@@c82pa=(+0vgy-$%u@4t)u6gsixa&og$e7mqv&'
+SECRET_KEY = 'bmh=)_$p7t-y(=8q_njl_ywdamt7wd#@!t626ypcbk_sy4#_e9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -48,9 +48,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'project.urls'
+ROOT_URLCONF = 'recruitmenttool.urls'
 
-WSGI_APPLICATION = 'project.wsgi.application'
+WSGI_APPLICATION = 'recruitmenttool.wsgi.application'
 
 
 # Database
@@ -81,4 +81,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_PATH = (os.path.join('templates/project/index.html', 'static'),)

@@ -9,8 +9,10 @@ class Report(models.Model):
 
     report_title = models.CharField(max_length=200)
     report_content = models.TextField()
+    report_author = models.ForeignKey(User, related_name="trainer_report")
+    report_applicant = models.ForeignKey(User, related_name="applicant_report")
     report_updated = models.DateTimeField(auto_now_add=True)
-    report_created = models.DateTimeField(default=datetime.datetime.now, editable=False)
+    report_created_at = models.DateTimeField(default=datetime.datetime.now, editable=False)
     report_is_public = models.BooleanField(default=False)
 
     def __str__(self):
@@ -42,8 +44,6 @@ ANSWER_CHOICES = (
 class Answer(models.Model):
     answer = models.IntegerField(choices=ANSWER_CHOICES)
     question = models.ForeignKey(Question)
-    applicant = models.ForeignKey(User)
-    trainer = models.ForeignKey(User)
     date_created = models.DateTimeField(default=datetime.datetime.now)
 
     def __str__(self):
@@ -53,8 +53,8 @@ class Answer(models.Model):
 class Rating(models.Model):
     rating = models.ForeignKey(Answer)
     question = models.ForeignKey(Question)
-    rated_by = models.ForeignKey(User)
-    applicant = models.ForeignKey(User)
+    rated_by = models.ForeignKey(User, related_name="trainer_ratings")
+    applicant = models.ForeignKey(User, related_name="applicant_ratings")
     created_on = models.DateTimeField(default=datetime.datetime.now)
 
     def __str__(self):

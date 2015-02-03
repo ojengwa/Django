@@ -1,15 +1,15 @@
 from django.test import TestCase
 
 # Create your tests here.
-from users.models import Applicant
+from users.models import User
 
-class AppplicantModelTests(TestCase):
+class UserModelTests(TestCase):
 
     def test_model_fields(self):
         """
         test that model contains certain fields
         """
-        fields = {field.name: field for field in Applicant._meta.fields}
+        fields = {field.name: field for field in User._meta.fields}
 
        	self.assertTrue(fields.has_key('user'))
         self.assertTrue(fields.has_key('first_name'))

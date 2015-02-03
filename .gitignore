@@ -63,4 +63,4 @@ target/
 #dev environment
 .applicant/migrations
 recruitmenttool/db.sqlite3
-recruitmenttool/settings/dev
+recruitmenttool/settings/dev.py

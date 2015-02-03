@@ -1,7 +1,7 @@
 from django.test import TestCase
 
 # Create your tests here.
-from applicant.models import Applicant
+from users.models import Applicant
 
 class AppplicantModelTests(TestCase):
 

@@ -6,8 +6,9 @@ from unittest import skip
 from django.test import TestCase
 from selenium import webdriver
 
-# Keyboard keys
+# Keyboard keys and UI elements
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import ui
 
 
 class FrontEndTest(TestCase):
@@ -29,7 +30,7 @@ class FrontEndTest(TestCase):
         self.q.send_keys('Ojengwa')
         self.q.send_keys(Keys.RETURN)
 
-        assert 'Ojengwa Bernard' in self.browser.page_source
+        assert 'Ojengwa' in self.browser.title
         pass
 
     @skip('Will implement test_registration later')
@@ -39,3 +40,18 @@ class FrontEndTest(TestCase):
     @skip('Will do later')
     def test_about(self):
         pass
+
+
+class BackendTest(TestCase):
+    """docstring for BackendTest"""
+
+    def setUp(self):
+        self.browser = webdriver.Firefox()
+        self.browser.implicitly_wait(10)
+
+    def tearDown(self):
+        self.browser.quit()
+
+    def test_login(self):
+        pass
+

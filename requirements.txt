@@ -1,4 +1,5 @@
 Django==1.7.4
+django-coverage==1.2.4
 djangorestframework==3.0.4
-selenium==2.44.0
 psycopg2==2.5.4
+selenium==2.44.0

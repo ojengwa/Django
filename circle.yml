@@ -1,3 +1,6 @@
-# database:
-#     override:
-#         - mysql -u ubuntu circle_test
+---
+test:
+  override:
+    - coverage run manage.py test
+  post:
+    - coverage html -d $CIRCLE_ARTIFACTS

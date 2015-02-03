@@ -61,6 +61,6 @@ docs/_build/
 target/
 
 #dev environment
-.applicant/migrations
-recruitmenttool/db.sqlite3
+migrations/
+*.sqlite3
 recruitmenttool/settings/dev.py

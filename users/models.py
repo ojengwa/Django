@@ -4,6 +4,7 @@ from django.contrib.auth.models import BaseUserManager
 
 
 class UserManager(BaseUserManager):
+
     def create_user(self, email, password=None, **kwargs):
         if not email:
             raise ValueError('Users must have a valid email address.')
@@ -11,9 +12,9 @@ class UserManager(BaseUserManager):
         if not kwargs.get('username'):
             raise ValueError('Users must have a valid username.')
 
-        user = self.model(
-            email=self.normalize_email(email), username=kwargs.get('username')
-        )
+        # user = self.model(
+        #     email=self.normalize_email(email), username=kwargs.get('username')
+        # )
 
         user.set_password(password)
         user.save()
@@ -30,6 +31,7 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser):
+    
     email = models.EmailField(unique=True)
     username = models.CharField(max_length=40, unique=True)
 

@@ -6,4 +6,8 @@ class ReportModelTest(TestCase):
 
 	def test_string_representation(self):
 		report = Report(report_title="My Title")
-		self.assertEqual(str(report), report.report_title)
+		self.assertEqual(str(report), report.title)
+
+	def test_string_representation(self):
+		report = Report(report_title="My Title")
+		self.assertEqual(str(report), report.content)

@@ -1,0 +1,3 @@
+database:
+    overide:
+        - mysql -u ubuntu circle_test

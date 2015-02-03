@@ -1,4 +1,5 @@
 from django.test import TestCase
+from django.db import models
 
 from users.models import User
 from users.models import UserManager
@@ -42,8 +43,14 @@ class UserManagerTest(TestCase):
         """
         create_user() should create and return user
         """
+        user = User.objects.create_user(email = "jason@gmail.com", password = "jasonswett", username = "jasonswett")
 
-        user = UserManager()
-        user.create_user(email = "jason@gmail.com", password = "jasonswett", username = "jasonswett")
+        self.assertIsInstance(user, User)
 
-        self.assertEqual(user.email, "jason@gmail.com")
+    def test_create_super_user(self):
+        """
+        create_super_user() should create and return user
+        """
+        user = User.objects.create_superuser(email = "jason@gmail.com", password = "jasonswett", username = "jasonswett")
+
+        self.assertIsInstance(user, User)

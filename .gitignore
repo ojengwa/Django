@@ -60,6 +60,7 @@ docs/_build/
 # PyBuilder
 target/
 
+#dev environment
 .applicant/migrations
-
 recruitmenttool/db.sqlite3
+recruitmenttool/settings/dev

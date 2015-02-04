@@ -8,5 +8,6 @@ DATABASES = {
         'PASSWORD': '[]',
         'HOST': 'localhost',
         'PORT': 5433,
+        'TEST_NAME': 'circle_test',
     }
 }

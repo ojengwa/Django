@@ -58,16 +58,4 @@ class User(AbstractBaseUser):
         return ' '.join([self.first_name, self.last_name])
 
     def get_short_name(self):
-        return self.first_name
-
-# class Applicant(models.Models):
-    
-
-
-
-#     test
-#     Date_started
-#     date_ended
-#     user foreign key
-
-        
+        return self.first_name       

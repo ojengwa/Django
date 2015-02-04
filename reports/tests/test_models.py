@@ -3,7 +3,9 @@ from django.test import TestCase
 from reports.models import Report
 
 class ReportModelTest(TestCase):
-	def test_model_fields(self):
+
+    def test_model_fields(self):
+        
         """
         test that model contains certain fields
         """
@@ -17,6 +19,6 @@ class ReportModelTest(TestCase):
         self.assertTrue(fields.has_key('created_at'))
         self.assertTrue(fields.has_key('is_public'))
 
-	def test_string_representation(self):
-		report = Report(title="My Title")
-		self.assertEqual(str(report), report.title)
+    def test_string_representation(self):
+    	report = Report(title="My Title")
+    	self.assertEqual(str(report), report.title)

@@ -59,3 +59,15 @@ class User(AbstractBaseUser):
 
     def get_short_name(self):
         return self.first_name
+
+# class Applicant(models.Models):
+    
+
+
+
+#     test
+#     Date_started
+#     date_ended
+#     user foreign key
+
+        

@@ -10,6 +10,9 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import envvars
+
+envvars.load()
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -17,10 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'bmh=)_$p7t-y(=8q_njl_ywdamt7wd#@!t626ypcbk_sy4#_e9'
+SECRET_KEY = envvars.get('DJANGO_SECRETKEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = envvars.get('DEBUG')
 
 TEMPLATE_DEBUG = True
 

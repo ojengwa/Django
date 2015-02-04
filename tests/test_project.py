@@ -25,12 +25,12 @@ class FrontEndTest(TestCase):
 
 
     def test_homepage(self):
-        self.browser.get('http://localhost:8000')
+        self.browser.get('http://google.com')
         # self.q = self.browser.find_element_by_name('q')
         # self.q.send_keys('Ojengwa')
         # self.q.send_keys(Keys.RETURN)
 
-        assert 'Django' in self.browser.title
+        assert 'Google' in self.browser.title
 
 
     @skip('Will implement test_registration later')

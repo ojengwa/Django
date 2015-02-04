@@ -1,5 +1,5 @@
 machine:
   environment:
     DJANGO_SETTINGS_MODULE: recruitmenttool.settings.test
-	DJANGO_SECRETKEY: 'bmh=)_$p7t-y(=8q_njl_ywdamt7wd#@!t626ypcbk_sy4#_e9'
-	DEBUG: False
+  	DJANGO_SECRETKEY: 'bmh=)_$p7t-y(=8q_njl_ywdamt7wd#@!t626ypcbk_sy4#_e9'
+  	DEBUG: False

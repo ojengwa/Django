@@ -13,7 +13,7 @@ class SimpleTest(TestCase):
         self.assertEqual(1+2, 3)
 
     def test_web(self):
-        self.browser.get('http://google.com')
+        self.browser.get('http://localhost:8000')
 
         assert 'Django' in self.browser.title
 

@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 
+# Dev files
+dev.py
+
 # C extensions
 *.so
 
@@ -17,7 +20,9 @@ lib/
 lib64/
 parts/
 sdist/
-venv
+venv/
+env/
+.env
 var/
 *.egg-info/
 .installed.cfg
@@ -55,3 +60,8 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#dev environment
+migrations/
+*.sqlite3
+recruitmenttool/settings/dev.py

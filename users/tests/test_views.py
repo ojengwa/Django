@@ -3,6 +3,7 @@ from selenium import webdriver
 
 # Create your tests here.
 
+
 class SimpleTest(TestCase):
     """docstring for SimpleTest"""
 
@@ -10,7 +11,7 @@ class SimpleTest(TestCase):
         self.browser = webdriver.Firefox()
 
     def test_addition(self):
-        self.assertEqual(1+2, 3)
+        self.assertEqual(1 + 2, 3)
 
     def test_web(self):
         self.browser.get('http://localhost:8000')
